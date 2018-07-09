@@ -22,6 +22,18 @@ namespace ApiEstado.Controller
             return estados.FirstOrDefault(x => x.Id == id);
         }
 
+        [HttpPost]
+        public EstadoDto Post(EstadoDto dto)
+        {
+            return dto;
+        }
+
+        [HttpPut("{id}")]
+        public EstadoDto Put(int id, EstadoDto dto)
+        {
+            return dto;
+        }
+
         private List<EstadoDto> ListarEstados()
         {
             var estados = new List<EstadoDto>()
